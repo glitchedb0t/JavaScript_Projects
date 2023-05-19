@@ -14,5 +14,5 @@ function my_Dictionary() {
     delete iceCreamFlavors.Pink;
 
     // This line of code identifies the HTML element id'ed by dictionary and outputs the value paired with the Yellow key
-    document.getElementById("dictionary").innerHTML = iceCreamFlavors.Yellow;
+    document.getElementById("dictionary").innerHTML = iceCreamFlavors.Pink;
 }
