@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  </head>
+
+  <script>
+
+    // This code defines the structure of the HTML elements in jQuery.
+    $(document).ready(function() {
+        $("html").append (
+            "<body>\
+                <div id = 'container'>\
+                    <div id = 'inner'>\
+                        <h1>Basic jQuery</h1>\
+                        <p id = '1'>Paragraph 1</p>\
+                        <p id = '2'>Paragraph 2</p>\
+                        <p id = '3'>Paragraph 3</p>\
+                    </div>\
+                </div>\
+            </body>"
+        );
+
+        // This event prints "hovered!" to the console whenever the user hovers their mouse cursor over the Paragraph (id'ed by #1) element.
+        $("#1").on({
+            "mouseover": function() { console.log("hovered!"); }
+        }); 
+        // This changes the color of the Paragraph (id'ed by #2) element to red.
+        $("#2").css({"color": "red"});
+        // This event slowly fades out the header element when the Paragraph (id'ed by #3) element is clicked on.
+        $("#3").click(function() {
+            $('h1').fadeOut( 1500 );
+        });
+    });
+  </script>
+</html>
